@@ -743,10 +743,7 @@ class WhoisPl(WhoisEntry):
     }
 
     def __init__(self, domain, text):
-        if 'No information available about domain name' in text:
-            raise PywhoisError(text)
-        else:
-            WhoisEntry.__init__(self, domain, text, self.regex)
+    	WhoisEntry.__init__(self, domain, text, self.regex)
 
 
 class WhoisGroup(WhoisEntry):
